@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/earlyaccess/opensanshebrew.css");
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "open sans hebrew";
+}
+
+html {
+    --scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  }
+  
+body{
+    place-items: center;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 350px;
+    padding-bottom: 1000px;
+}
+
+.range{
+    background: rgb(255, 255, 255);
+    /*border: solid 3px black;*/
+    border-radius: 25px;
+    width: 800px;
+    position: relative;
+    top: 200px;
+    height: 150px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+}
+
+.range .field{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+}
+
+.range .field input{
+    -webkit-appearance: none;
+    width: 80%;
+    height: 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: #ddd;
+}
+
+
+.range .field input::-webkit-slider-thumb{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--bluecolor);
+    cursor: pointer;
+
+    ;
+    -webkit-appearance: none;
+}
+.range .field .value{
+    position:relative;
+    font-size: 50px;
+    color: black;
+
+}
+.value.left {
+    right: -10px;
+}
+
+.value.right {
+    left: -10px;
+}
+
+.range .sliderValue{
+    position: relative;
+    width: 100%;
+}
+
+.range .sliderValue span{
+    position: absolute;
+    height: 100px;
+    text-align: center;
+    width: 100px;
+    border-radius: 50%;
+    background: var(--bluecolor);
+    color: white;
+    font-size: 50px;
+    line-height: 90px;
+    top:-30px
+
+}
+
+:root{
+    --bluecolor: #1F51FF	;
+}
+
+li{
+    margin-bottom: 160px;
+    list-style: none;
+}
+
+.range a{
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -120px;
+    font-size: 75px;
+}
+
+button{
+    position: relative;
+    top: 100px;
+
+    width: auto;
+    font-size: 60px;
+    height: 130px;
+    border-radius: 30px;
+    background-color: var(--bluecolor);
+    border: none;
+    color: white;
+    padding-right: 80px;
+    padding-left: 80px;
+    cursor: pointer;
+}
+
+.title1{
+    top:40px;
+    position: relative;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.title1.bold{
+    color: var(--bluecolor);
+}
+
+.result{
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 250px;
+}
+
+.result .title{
+    display: none;
+    position:absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 80px;
+}
+
+.result #results{
+    display: none;
+    position:absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 80px;
+    color: var(--bluecolor);
+
+}
+
+.result .title.show, #results.show{
+    display: block;
+}
+
+.borders{
+    width: 93%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: solid 1px rgba(175, 175, 175, 0.692);
+}
+
+.result .slidern{
+    width: 730px;
+    height: 40px;
+    border: solid 2px black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 140px;
+}
+
+.result .slidern a{
+    font-size: 40px;
+    position:absolute;
+}
+
+.result .slidern .miny{
+    right:-80px;
+    top: -9px;
+}
+
+.result .slidern .maxy{
+    left:-80px;
+    top: -9px
+}
+
+.result .slidern #resultLine{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    position: relative;
+    left: 0px;
+    top: -2px;
+}
+
+.titleRec{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    top:0px
+}
