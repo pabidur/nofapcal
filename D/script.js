@@ -28,12 +28,29 @@ inputSlider1.oninput = (()=>{
 
 });
 
+//input year
+const slideValue2 = document.getElementById("span3");
+const inputSlider2 = document.getElementById("input3");
+let value2 = inputSlider2.value;
+slideValue2.textContent = inputSlider2.value;
+
+slideValue2.style.left = (35+value2*8.695652173913043) + "px";
+
+inputSlider2.oninput = (()=>{
+  let value2 = inputSlider2.value;
+  slideValue2.textContent = value2;
+  slideValue2.style.left = (35+value2*8.695652173913043) + "px";
+
+});
+
 const resultLine = document.getElementById("resultLine")
 function calculate(){
     sB12 = 0;
     const day = inputSlider.value
     const month = (inputSlider1.value)*30
-    const days = Number(day)+Number(month)
+    const year = (inputSlider2.value)*360
+
+    const days = Number(day)+Number(month)+Number(year)
     calculateB12 = Math.round((sB12) + (days*3) + 0.5*(0.05*(days*days)))
     document.querySelector(".title").classList.add("show")
     document.getElementById("results").classList.add("show")
