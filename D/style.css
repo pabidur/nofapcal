@@ -118,7 +118,7 @@ li{
 
 button{
     position: relative;
-    top: 100px;
+    top: 140px;
 
     width: auto;
     font-size: 60px;
@@ -219,7 +219,7 @@ button{
     left: 0px;
     top: -2px;
     transition: ease 0.5s;
-
+    transition-delay: 0.2s;
 }
 
 .titleRec{
@@ -229,4 +229,61 @@ button{
     position: fixed;
     z-index: 100;
     top:0px
+}
+
+input[type="checkbox"]{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    z-index: 2;
+    top: 40px;
+    -webkit-appearance: none;
+    background-color: rgb(235, 235, 235);
+    border-radius: 500px;
+    transform: scale(35%);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+    background-color: #d7dfff;
+}
+input[type="checkbox"]:checked::before{
+    left: -100px;
+    background-color: var(--bluecolor);
+}
+
+input[type="checkbox"]::before{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 300px;
+    top: -50px;
+    content: ' ';
+    background-color: white;
+    border-radius: 50%;
+    transition: ease-out 0.2s;
+    box-shadow: 0 0px 60px 0 rgb(0 0 0 / 30%), 0px 0px 0 rgb(0 0 0 / 19%);
+
+}
+
+li .checkboxx a{
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -5px;
+    font-size: 75px;
+
+}
+
+li .checkboxx{
+    background: none;
+    /*border: solid 3px black;*/
+    border-radius: 25px;
+    width: 800px;
+    position: relative;
+    height: 150px;
+    text-align: center;
+    margin: auto;
+    top: 100px;
 }

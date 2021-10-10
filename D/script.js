@@ -43,15 +43,28 @@ inputSlider2.oninput = (()=>{
 
 });
 
+  
+
+
 const resultLine = document.getElementById("resultLine")
 function calculate(){
+    var Orla = document.getElementById('Orla');
+
+  
     sB12 = 0;
+    if (Orla.checked){
+      Orlav = 0.3
+    }
+    else {
+      Orlav = 0
+
+    }
     const day = inputSlider.value
     const month = (inputSlider1.value)*30
     const year = (inputSlider2.value)*360
 
     const days = Number(day)+Number(month)+Number(year)
-    calculateB12 = Math.round((sB12) + (days*3) + 0.5*(0.05*(days*days)))
+    calculateB12 = Number(Orlav) + Math.round((days*3) + 0.5*(0.05*(days*days)))
     document.querySelector(".title").classList.add("show")
     document.getElementById("results").classList.add("show")
     var resultim = document.querySelector( '.result' );
